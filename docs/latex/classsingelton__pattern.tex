@@ -1,0 +1,95 @@
+\doxysection{singelton\+\_\+pattern Class Reference}
+\hypertarget{classsingelton__pattern}{}\label{classsingelton__pattern}\index{singelton\_pattern@{singelton\_pattern}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsingelton__pattern_a833662b58d18accb7642380e3df8a3d8}{\texorpdfstring{$\sim$}{\string~}singelton\+\_\+pattern}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the singelton pattern object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsingelton__pattern}{singelton\+\_\+pattern}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}{get\+\_\+singleton\+\_\+object}} ()
+\begin{DoxyCompactList}\small\item\em Get the singleton object object ~\newline
+ \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}{get\+\_\+instance\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Get the instance count object (how many insatcens fo the class is avaiable) ~\newline
+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsingelton__pattern_a833662b58d18accb7642380e3df8a3d8}\label{classsingelton__pattern_a833662b58d18accb7642380e3df8a3d8} 
+\index{singelton\_pattern@{singelton\_pattern}!````~singelton\_pattern@{\texorpdfstring{$\sim$}{\string~}singelton\_pattern}}
+\index{````~singelton\_pattern@{\texorpdfstring{$\sim$}{\string~}singelton\_pattern}!singelton\_pattern@{singelton\_pattern}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}singelton\_pattern()}{\string~singelton\_pattern()}}
+{\footnotesize\ttfamily singelton\+\_\+pattern\+::\texorpdfstring{$\sim$}{\string~}singelton\+\_\+pattern (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the singelton pattern object. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(instance\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ instance\_count)\{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}singleton\_pattern\ classs\ object\ destroyed"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ instance\_count-\/-\/;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ instance;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}\label{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3} 
+\index{singelton\_pattern@{singelton\_pattern}!get\_instance\_count@{get\_instance\_count}}
+\index{get\_instance\_count@{get\_instance\_count}!singelton\_pattern@{singelton\_pattern}}
+\doxysubsubsection{\texorpdfstring{get\_instance\_count()}{get\_instance\_count()}}
+{\footnotesize\ttfamily static int singelton\+\_\+pattern\+::get\+\_\+instance\+\_\+count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the instance count object (how many insatcens fo the class is avaiable) ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ instance\_count;}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}\label{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377} 
+\index{singelton\_pattern@{singelton\_pattern}!get\_singleton\_object@{get\_singleton\_object}}
+\index{get\_singleton\_object@{get\_singleton\_object}!singelton\_pattern@{singelton\_pattern}}
+\doxysubsubsection{\texorpdfstring{get\_singleton\_object()}{get\_singleton\_object()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsingelton__pattern}{singelton\+\_\+pattern}} \texorpdfstring{$\ast$}{*} singelton\+\_\+pattern\+::get\+\_\+singleton\+\_\+object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the singleton object object ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+singelton\+\_\+pattern\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{if}(instance\ ==\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/\mbox{\hyperlink{singelton__pattern_8cpp}{singelton\+\_\+pattern.\+cpp}}\end{DoxyCompactItemize}

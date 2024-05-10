@@ -1,0 +1,66 @@
+\doxysection{/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/singelton\+\_\+pattern.cpp File Reference}
+\hypertarget{singelton__pattern_8cpp}{}\label{singelton__pattern_8cpp}\index{/home/sagar/design\_pattern/creational\_design\_patterns/singelton\_pattern.cpp@{/home/sagar/design\_pattern/creational\_design\_patterns/singelton\_pattern.cpp}}
+
+
+Creates singletion object for the class.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsingelton__pattern}{singelton\+\_\+pattern}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{singelton__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates singletion object for the class. 
+
+\begin{DoxyAuthor}{Author}
+sagar ramdev 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/08
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{singelton__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{singelton__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089} 
+\index{singelton\_pattern.cpp@{singelton\_pattern.cpp}!main@{main}}
+\index{main@{main}!singelton\_pattern.cpp@{singelton\_pattern.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & no of argument passed from command line to singleton binary \\
+\hline
+{\em argv} & arguments from command line to singleton binary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{/*\ code\ */}}
+\DoxyCodeLine{00082\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}instance\ count\ :\ "{}}\ <<\ \mbox{\hyperlink{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}{singelton\_pattern::get\_instance\_count}}()\ <<\ std::endl;}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}\ *s1\ =\ \mbox{\hyperlink{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}{singelton\_pattern::get\_singleton\_object}}();}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}\ *s2\ =\ \mbox{\hyperlink{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}{singelton\_pattern::get\_singleton\_object}}();}
+\DoxyCodeLine{00085\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}instance\ count\ :\ "{}}\ <<\ \mbox{\hyperlink{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}{singelton\_pattern::get\_instance\_count}}()\ <<\ std::endl;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00087\ \}}
+
+\end{DoxyCode}
