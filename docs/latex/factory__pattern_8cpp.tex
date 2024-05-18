@@ -1,0 +1,76 @@
+\doxysection{/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/factory\+\_\+method/factory\+\_\+pattern.cpp File Reference}
+\hypertarget{factory__pattern_8cpp}{}\label{factory__pattern_8cpp}\index{/home/sagar/design\_pattern/creational\_design\_patterns/factory\_method/factory\_pattern.cpp@{/home/sagar/design\_pattern/creational\_design\_patterns/factory\_method/factory\_pattern.cpp}}
+
+
+It demostrates factory method pattern which hides the creation of object from end user returns teh vehicle object irrepective of user vehicle choice.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classVehicle}{Vehicle}}
+\begin{DoxyCompactList}\small\item\em created vechcile abstract interface ~\newline
+ \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classCar}{Car}}
+\begin{DoxyCompactList}\small\item\em implemeted car class by inheriting from abstract vehicle \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classbike}{bike}}
+\begin{DoxyCompactList}\small\item\em implemeted bike class by inheriting from abstract vehicle \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classVehicalFactory}{Vehical\+Factory}}
+\begin{DoxyCompactList}\small\item\em created a factory class to get vehicle as per user choice it hides the implementation of vehicle creation returns a vehicle object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{factory__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main appilcation program \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It demostrates factory method pattern which hides the creation of object from end user returns teh vehicle object irrepective of user vehicle choice. 
+
+\begin{DoxyAuthor}{Author}
+Sagar Ramdev (\href{mailto:sagarramdev173@gmail.com}{\texttt{ sagarramdev173@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{factory__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{factory__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089} 
+\index{factory\_pattern.cpp@{factory\_pattern.cpp}!main@{main}}
+\index{main@{main}!factory\_pattern.cpp@{factory\_pattern.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main appilcation program 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{classVehicle}{Vehicle}}\ *home\_vehicle\ =\ VehicalFactory::getVehicle(\textcolor{stringliteral}{"{}bike"{}});}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{classVehicle}{Vehicle}}\ *friend\_vehicle\ =\ VehicalFactory::getVehicle(\textcolor{stringliteral}{"{}car"{}});}
+\DoxyCodeLine{00097\ \ \ \ \ home\_vehicle-\/>createvechicle();}
+\DoxyCodeLine{00098\ \ \ \ \ friend\_vehicle-\/>createvechicle();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00100\ \}}
+
+\end{DoxyCode}

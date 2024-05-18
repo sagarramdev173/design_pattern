@@ -26,7 +26,11 @@ Abstract Factory is a creational design pattern, which solves the problem of cre
 let suppose users wants different company vehicles like honda,tata etc. you want to hide the implemnetation of vehcile created by differnt companies fatcory then you will use
 abstract factory design pattern.
 
+<img src="image-2.png" align ="centre" height="220" width= "320" />
 
-![IDialogbox](image.png){: style="height:83px"}
 
-![IButton](image-1.png) {: style="height:83px"}
+<img src="image.png" align="right" height="220" width="320" />
+<img src="image-1.png" align="left" height="220" width="320" />
+
+
+

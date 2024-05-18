@@ -1,7 +1,8 @@
 /**
- * @file factory_method.cpp
+ * @file factory_pattern.cpp
  * @author Sagar Ramdev (sagarramdev173@gmail.com)
- * @brief It demostrates factory method pattern which hides the creation of object from end user returns teh vehicle object irrepective of user vehicle choice
+ * @brief It demostrates factory method pattern which hides the creation 
+ *        of object from end user returns teh vehicle object irrepective of user vehicle choice
  * @version 0.1
  * @date 2024-05-18
  * 
