@@ -1,0 +1,65 @@
+\doxysection{Windows\+Factory Class Reference}
+\hypertarget{classWindowsFactory}{}\label{classWindowsFactory}\index{WindowsFactory@{WindowsFactory}}
+
+
+created concrete factory class for button and dialogbox  
+
+
+Inheritance diagram for Windows\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classWindowsFactory}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIButton}{IButton}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classWindowsFactory_a84bbece1d98183aee201406f3189a754}{create\+Button}} ()
+\item 
+\mbox{\hyperlink{classIDialogBox}{IDialog\+Box}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classWindowsFactory_a9d3abb1541711a3e7e708ed3e6700bee}{create\+Dialog\+Box}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+created concrete factory class for button and dialogbox 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classWindowsFactory_a84bbece1d98183aee201406f3189a754}\label{classWindowsFactory_a84bbece1d98183aee201406f3189a754} 
+\index{WindowsFactory@{WindowsFactory}!createButton@{createButton}}
+\index{createButton@{createButton}!WindowsFactory@{WindowsFactory}}
+\doxysubsubsection{\texorpdfstring{createButton()}{createButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIButton}{IButton}} \texorpdfstring{$\ast$}{*} Windows\+Factory\+::create\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIFactory}{IFactory}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classWindowsButton}{WindowsButton}}();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classWindowsFactory_a9d3abb1541711a3e7e708ed3e6700bee}\label{classWindowsFactory_a9d3abb1541711a3e7e708ed3e6700bee} 
+\index{WindowsFactory@{WindowsFactory}!createDialogBox@{createDialogBox}}
+\index{createDialogBox@{createDialogBox}!WindowsFactory@{WindowsFactory}}
+\doxysubsubsection{\texorpdfstring{createDialogBox()}{createDialogBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIDialogBox}{IDialog\+Box}} \texorpdfstring{$\ast$}{*} Windows\+Factory\+::create\+Dialog\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIFactory}{IFactory}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classWindowsDialogBox}{WindowsDialogBox}}();}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/factory\+\_\+method/\mbox{\hyperlink{abstract__factory_8cpp}{abstract\+\_\+factory.\+cpp}}\end{DoxyCompactItemize}

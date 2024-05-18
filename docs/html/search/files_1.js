@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['thread_5fsafe_5fsingleton_2ecpp_0',['thread_safe_singleton.cpp',['../thread__safe__singleton_8cpp.html',1,'']]]
+  ['singelton_5fpattern_2ecpp_0',['singelton_pattern.cpp',['../singelton__pattern_8cpp.html',1,'']]]
 ];

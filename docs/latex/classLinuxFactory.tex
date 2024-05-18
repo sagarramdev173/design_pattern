@@ -1,0 +1,57 @@
+\doxysection{Linux\+Factory Class Reference}
+\hypertarget{classLinuxFactory}{}\label{classLinuxFactory}\index{LinuxFactory@{LinuxFactory}}
+Inheritance diagram for Linux\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classLinuxFactory}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIButton}{IButton}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLinuxFactory_a9a86873de5b214ff293038ef46feca6d}{create\+Button}} ()
+\item 
+\mbox{\hyperlink{classIDialogBox}{IDialog\+Box}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classLinuxFactory_a96331a32d53eca5f7929931e3447899e}{create\+Dialog\+Box}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classLinuxFactory_a9a86873de5b214ff293038ef46feca6d}\label{classLinuxFactory_a9a86873de5b214ff293038ef46feca6d} 
+\index{LinuxFactory@{LinuxFactory}!createButton@{createButton}}
+\index{createButton@{createButton}!LinuxFactory@{LinuxFactory}}
+\doxysubsubsection{\texorpdfstring{createButton()}{createButton()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIButton}{IButton}} \texorpdfstring{$\ast$}{*} Linux\+Factory\+::create\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIFactory}{IFactory}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classLinuxButton}{LinuxButton}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classLinuxFactory_a96331a32d53eca5f7929931e3447899e}\label{classLinuxFactory_a96331a32d53eca5f7929931e3447899e} 
+\index{LinuxFactory@{LinuxFactory}!createDialogBox@{createDialogBox}}
+\index{createDialogBox@{createDialogBox}!LinuxFactory@{LinuxFactory}}
+\doxysubsubsection{\texorpdfstring{createDialogBox()}{createDialogBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIDialogBox}{IDialog\+Box}} \texorpdfstring{$\ast$}{*} Linux\+Factory\+::create\+Dialog\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIFactory}{IFactory}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classLinuxDialogBox}{LinuxDialogBox}}();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/factory\+\_\+method/\mbox{\hyperlink{abstract__factory_8cpp}{abstract\+\_\+factory.\+cpp}}\end{DoxyCompactItemize}

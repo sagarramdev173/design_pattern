@@ -1,8 +1,8 @@
-# Factroy method
+## Factory design pattern
 
 The Fectory method patterns provides a generalized way to create instance of an object and can be great way to hide implementation details for derived class.
 
-# Problem it solves
+## Problem 
 
 Imagine that you’re creating a logistics management application. The first version of your app can only handle transportation by trucks, so the bulk of your code lives inside the Truck class.
 
@@ -13,6 +13,20 @@ Great news, right? But how about the code? At present, most of your code is coup
 As a result, you will end up with pretty nasty code, riddled with conditionals that switch the app’s behavior depending on the class of transportation objects.
 
 
-# Solution
+## Solution
 
 The Factory Method pattern suggests that you replace direct object construction calls (using the new operator) with calls to a special factory method. Don’t worry: the objects are still created via the new operator, but it’s being called from within the factory method. Objects returned by a factory method are often referred to as products.
+
+## Abstract factory design pattern
+
+Abstract Factory is a creational design pattern, which solves the problem of creating entire product families without specifying their concrete classes.
+
+## Problem it solves
+
+let suppose users wants different company vehicles like honda,tata etc. you want to hide the implemnetation of vehcile created by differnt companies fatcory then you will use
+abstract factory design pattern.
+
+
+![IDialogbox](image.png){: style="height:83px"}
+
+![IButton](image-1.png) {: style="height:83px"}

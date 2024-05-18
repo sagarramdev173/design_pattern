@@ -1,0 +1,87 @@
+\doxysection{/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/factory\+\_\+method/abstract\+\_\+factory.cpp File Reference}
+\hypertarget{abstract__factory_8cpp}{}\label{abstract__factory_8cpp}\index{/home/sagar/design\_pattern/creational\_design\_patterns/factory\_method/abstract\_factory.cpp@{/home/sagar/design\_pattern/creational\_design\_patterns/factory\_method/abstract\_factory.cpp}}
+
+
+Creating abstract GUI factory for windows and linux based operating system.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classIButton}{IButton}}
+\begin{DoxyCompactList}\small\item\em created an interface for button and dialogbox \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classIDialogBox}{IDialog\+Box}}
+\item 
+class \mbox{\hyperlink{classWindowsButton}{Windows\+Button}}
+\begin{DoxyCompactList}\small\item\em created concrete classes for button and dialogbox \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWindowsDialogBox}{Windows\+Dialog\+Box}}
+\item 
+class \mbox{\hyperlink{classLinuxButton}{Linux\+Button}}
+\item 
+class \mbox{\hyperlink{classLinuxDialogBox}{Linux\+Dialog\+Box}}
+\item 
+class \mbox{\hyperlink{classIFactory}{IFactory}}
+\begin{DoxyCompactList}\small\item\em created abstract factory class for button and dialogbox \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWindowsFactory}{Windows\+Factory}}
+\begin{DoxyCompactList}\small\item\em created concrete factory class for button and dialogbox \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classLinuxFactory}{Linux\+Factory}}
+\item 
+class \mbox{\hyperlink{classGUIFactory}{GUIFactory}}
+\begin{DoxyCompactList}\small\item\em created factory class to get button and dialogbox as per user OS choice \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{abstract__factory_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main appilcation program to demonstrate abstract factory design pattern \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creating abstract GUI factory for windows and linux based operating system. 
+
+\begin{DoxyAuthor}{Author}
+Sagar ramdev (\href{mailto:sagarramdev173@gmail.com}{\texttt{ sagarramdev173@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{abstract__factory_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{abstract__factory_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089} 
+\index{abstract\_factory.cpp@{abstract\_factory.cpp}!main@{main}}
+\index{main@{main}!abstract\_factory.cpp@{abstract\_factory.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main appilcation program to demonstrate abstract factory design pattern 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00123\ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{string}\ ostype\ =\ \textcolor{stringliteral}{"{}linux"{}};}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{classIFactory}{IFactory}}\ *mygui\ =\ GUIFactory::getFactory(ostype);}
+\DoxyCodeLine{00126\ \ \ \ \ mygui-\/>createButton()-\/>press();}
+\DoxyCodeLine{00127\ \ \ \ \ mygui-\/>createDialogBox()-\/>show();}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,44 @@
+\doxysection{GUIFactory Class Reference}
+\hypertarget{classGUIFactory}{}\label{classGUIFactory}\index{GUIFactory@{GUIFactory}}
+
+
+created factory class to get button and dialogbox as per user OS choice  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classIFactory}{IFactory}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classGUIFactory_ae8ba6b677283cd2ab3b820791b8f2596}{get\+Factory}} (string type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+created factory class to get button and dialogbox as per user OS choice 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGUIFactory_ae8ba6b677283cd2ab3b820791b8f2596}\label{classGUIFactory_ae8ba6b677283cd2ab3b820791b8f2596} 
+\index{GUIFactory@{GUIFactory}!getFactory@{getFactory}}
+\index{getFactory@{getFactory}!GUIFactory@{GUIFactory}}
+\doxysubsubsection{\texorpdfstring{getFactory()}{getFactory()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classIFactory}{IFactory}} \texorpdfstring{$\ast$}{*} GUIFactory\+::get\+Factory (\begin{DoxyParamCaption}\item[{string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(type.compare(\textcolor{stringliteral}{"{}windows"{}})\ ==\ 0)\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classWindowsFactory}{WindowsFactory}}();}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(type.compare(\textcolor{stringliteral}{"{}linux"{}})\ ==\ 0)\{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classLinuxFactory}{LinuxFactory}}();}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/factory\+\_\+method/\mbox{\hyperlink{abstract__factory_8cpp}{abstract\+\_\+factory.\+cpp}}\end{DoxyCompactItemize}
