@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['singleton_0',['Singleton',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2singleton_2Singeltion.html',1,'']]]
+  ['method_0',['Factroy method',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html',1,'']]]
 ];

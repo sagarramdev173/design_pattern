@@ -1,0 +1,44 @@
+\doxysection{Vehical\+Factory Class Reference}
+\hypertarget{classVehicalFactory}{}\label{classVehicalFactory}\index{VehicalFactory@{VehicalFactory}}
+
+
+created a factory class to get vehicle as per user choice it hides the implementation of vehicle creation returns a vehicle object.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classVehicle}{Vehicle}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classVehicalFactory_a0b563a991e4161135e3f16ff8a70977f}{get\+Vehicle}} (string type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+created a factory class to get vehicle as per user choice it hides the implementation of vehicle creation returns a vehicle object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVehicalFactory_a0b563a991e4161135e3f16ff8a70977f}\label{classVehicalFactory_a0b563a991e4161135e3f16ff8a70977f} 
+\index{VehicalFactory@{VehicalFactory}!getVehicle@{getVehicle}}
+\index{getVehicle@{getVehicle}!VehicalFactory@{VehicalFactory}}
+\doxysubsubsection{\texorpdfstring{getVehicle()}{getVehicle()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classVehicle}{Vehicle}} \texorpdfstring{$\ast$}{*} Vehical\+Factory\+::get\+Vehicle (\begin{DoxyParamCaption}\item[{string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(type.compare(\textcolor{stringliteral}{"{}car"{}})\ ==\ 0)\{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classCar}{Car}}();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(type.compare(\textcolor{stringliteral}{"{}bike"{}})\ ==\ 0)\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classbike}{bike}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/factory\+\_\+method/factory\+\_\+pattern.\+cpp\end{DoxyCompactItemize}

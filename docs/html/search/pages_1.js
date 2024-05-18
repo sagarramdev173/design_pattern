@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['patterns_0',['Design patterns',['../index.html',1,'']]]
+  ['factroy_20method_0',['Factroy method',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html',1,'']]]
 ];

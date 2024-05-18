@@ -1,4 +1,4 @@
-SUBDIRS := singleton
+SUBDIRS := singleton factory_method
 
 .PHONY: all clean $(SUBDIRS)
 
