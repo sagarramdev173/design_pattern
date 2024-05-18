@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['singelton_5fpattern_0',['singelton_pattern',['../classsingelton__pattern.html',1,'']]],
-  ['singelton_5fpattern_2ecpp_1',['singelton_pattern.cpp',['../singelton__pattern_8cpp.html',1,'']]]
+  ['operator_3d_0',['operator=',['../classsingelton__pattern.html#a5d5a6a8b94f21d06b2af815a54950475',1,'singelton_pattern']]]
 ];

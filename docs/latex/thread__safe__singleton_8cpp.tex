@@ -1,0 +1,108 @@
+\doxysection{/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/singleton/thread\+\_\+safe\+\_\+singleton.cpp File Reference}
+\hypertarget{thread__safe__singleton_8cpp}{}\label{thread__safe__singleton_8cpp}\index{/home/sagar/design\_pattern/creational\_design\_patterns/singleton/thread\_safe\_singleton.cpp@{/home/sagar/design\_pattern/creational\_design\_patterns/singleton/thread\_safe\_singleton.cpp}}
+
+
+Creates thread safe singleton objects.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classsingleton}{singleton}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{thread__safe__singleton_8cpp_af28c90bebe37b4a82794aaed20a78c6c}{threadfoo}} ()
+\begin{DoxyCompactList}\small\item\em Demo thread function which simulates threading. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{thread__safe__singleton_8cpp_adc9b1870f22d9c8a04b82e1cb24c44e4}{threadbar}} ()
+\item 
+int \mbox{\hyperlink{thread__safe__singleton_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em main function to demo the threadsafe singleton \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Creates thread safe singleton objects. 
+
+\begin{DoxyAuthor}{Author}
+Sagar Ramdev (\href{mailto:sagar.ramdev@gmail.com}{\texttt{ sagar.\+ramdev@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{thread__safe__singleton_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{thread__safe__singleton_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{thread\_safe\_singleton.cpp@{thread\_safe\_singleton.cpp}!main@{main}}
+\index{main@{main}!thread\_safe\_singleton.cpp@{thread\_safe\_singleton.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+main function to demo the threadsafe singleton 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+creating two threads
+
+joining the threads
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ std::thread\ t1(\mbox{\hyperlink{thread__safe__singleton_8cpp_af28c90bebe37b4a82794aaed20a78c6c}{threadfoo}});}
+\DoxyCodeLine{00088\ \ \ \ \ std::thread\ t2(threadbar);}
+\DoxyCodeLine{00089\ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ t1.join();}
+\DoxyCodeLine{00092\ \ \ \ \ t2.join();}
+\DoxyCodeLine{00093\ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \ \ }
+\DoxyCodeLine{00095\ \}}
+
+\end{DoxyCode}
+\Hypertarget{thread__safe__singleton_8cpp_adc9b1870f22d9c8a04b82e1cb24c44e4}\label{thread__safe__singleton_8cpp_adc9b1870f22d9c8a04b82e1cb24c44e4} 
+\index{thread\_safe\_singleton.cpp@{thread\_safe\_singleton.cpp}!threadbar@{threadbar}}
+\index{threadbar@{threadbar}!thread\_safe\_singleton.cpp@{thread\_safe\_singleton.cpp}}
+\doxysubsubsection{\texorpdfstring{threadbar()}{threadbar()}}
+{\footnotesize\ttfamily void threadbar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{classsingleton}{singleton}}*\ s1\ =\ \mbox{\hyperlink{classsingleton_a878517b00c9a29ce3d57627bf8119d44}{singleton::get\_instance}}(\textcolor{stringliteral}{"{}frombar"{}});}
+\DoxyCodeLine{00076\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}getting\ dummy\ value\ :\ "{}}\ <<\ s1-\/>\mbox{\hyperlink{classsingleton_a137b688a14be4da9e83aae632bc3798b}{get\_dummy\_value}}()\ <<\ std::endl;}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
+\Hypertarget{thread__safe__singleton_8cpp_af28c90bebe37b4a82794aaed20a78c6c}\label{thread__safe__singleton_8cpp_af28c90bebe37b4a82794aaed20a78c6c} 
+\index{thread\_safe\_singleton.cpp@{thread\_safe\_singleton.cpp}!threadfoo@{threadfoo}}
+\index{threadfoo@{threadfoo}!thread\_safe\_singleton.cpp@{thread\_safe\_singleton.cpp}}
+\doxysubsubsection{\texorpdfstring{threadfoo()}{threadfoo()}}
+{\footnotesize\ttfamily void threadfoo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Demo thread function which simulates threading. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{classsingleton}{singleton}}*\ s1\ =\ \mbox{\hyperlink{classsingleton_a878517b00c9a29ce3d57627bf8119d44}{singleton::get\_instance}}(\textcolor{stringliteral}{"{}fromfoo"{}});}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}getting\ dummy\ value\ :\ "{}}\ <<\ s1-\/>\mbox{\hyperlink{classsingleton_a137b688a14be4da9e83aae632bc3798b}{get\_dummy\_value}}()\ <<\ std::endl;}
+\DoxyCodeLine{00071\ \ \ \ \ }
+\DoxyCodeLine{00072\ \}}
+
+\end{DoxyCode}

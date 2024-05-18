@@ -1,5 +1,5 @@
-\doxysection{/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/singelton\+\_\+pattern.cpp File Reference}
-\hypertarget{singelton__pattern_8cpp}{}\label{singelton__pattern_8cpp}\index{/home/sagar/design\_pattern/creational\_design\_patterns/singelton\_pattern.cpp@{/home/sagar/design\_pattern/creational\_design\_patterns/singelton\_pattern.cpp}}
+\doxysection{/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/singleton/singelton\+\_\+pattern.cpp File Reference}
+\hypertarget{singelton__pattern_8cpp}{}\label{singelton__pattern_8cpp}\index{/home/sagar/design\_pattern/creational\_design\_patterns/singleton/singelton\_pattern.cpp@{/home/sagar/design\_pattern/creational\_design\_patterns/singleton/singelton\_pattern.cpp}}
 
 
 Creates singletion object for the class.  
@@ -54,13 +54,18 @@ int
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00080\ \{}
-\DoxyCodeLine{00081\ \ \ \ \ \textcolor{comment}{/*\ code\ */}}
-\DoxyCodeLine{00082\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}instance\ count\ :\ "{}}\ <<\ \mbox{\hyperlink{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}{singelton\_pattern::get\_instance\_count}}()\ <<\ std::endl;}
-\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}\ *s1\ =\ \mbox{\hyperlink{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}{singelton\_pattern::get\_singleton\_object}}();}
-\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}\ *s2\ =\ \mbox{\hyperlink{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}{singelton\_pattern::get\_singleton\_object}}();}
-\DoxyCodeLine{00085\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}instance\ count\ :\ "{}}\ <<\ \mbox{\hyperlink{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}{singelton\_pattern::get\_instance\_count}}()\ <<\ std::endl;}
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00087\ \}}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{comment}{/*\ code\ */}}
+\DoxyCodeLine{00116\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}instance\ count\ :\ "{}}\ <<\ \mbox{\hyperlink{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}{singelton\_pattern::get\_instance\_count}}()\ <<\ std::endl;}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}\ *s1\ =\ \mbox{\hyperlink{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}{singelton\_pattern::get\_singleton\_object}}();\ \ \ \ }
+\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}\ *s2\ =\ \mbox{\hyperlink{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}{singelton\_pattern::get\_singleton\_object}}();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{//setting\ the\ dummy\ vlaue\ and\ observing\ that\ only\ one\ instance\ is\ created}}
+\DoxyCodeLine{00121\ \ \ \ \ s1-\/>\mbox{\hyperlink{classsingelton__pattern_ad78356cd9b72bd8f5d5bbefefd601012}{set\_dummy\_value}}(\textcolor{stringliteral}{"{}demo"{}});}
+\DoxyCodeLine{00122\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Getting\ the\ object\ dumy\ value\ :\ "{}}\ <<\ s2-\/>\mbox{\hyperlink{classsingelton__pattern_ad1ab2a01976d58fdcb3293d15836305d}{get\_dummy\_value}}()\ <<\ std::endl;}
+\DoxyCodeLine{00123\ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}instance\ count\ :\ "{}}\ <<\ \mbox{\hyperlink{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}{singelton\_pattern::get\_instance\_count}}()\ <<\ std::endl;}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00126\ \}}
 
 \end{DoxyCode}

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7esingelton_5fpattern_0',['~singelton_pattern',['../classsingelton__pattern.html#a833662b58d18accb7642380e3df8a3d8',1,'singelton_pattern']]]
+  ['pattern_0',['steps to create single design pattern',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2singleton_2Singeltion.html#autotoc_md1',1,'']]],
+  ['patterns_1',['Design patterns',['../index.html',1,'']]]
 ];

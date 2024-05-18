@@ -4,7 +4,15 @@
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classsingelton__pattern_a833662b58d18accb7642380e3df8a3d8}{\texorpdfstring{$\sim$}{\string~}singelton\+\_\+pattern}} ()
-\begin{DoxyCompactList}\small\item\em Destroy the singelton pattern object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destroy the singelton pattern object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsingelton__pattern_abb1a67461114d4201e511453669ada9e}{singelton\+\_\+pattern}} (const \mbox{\hyperlink{classsingelton__pattern}{singelton\+\_\+pattern}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em The singleton should not be cloneable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsingelton__pattern_a5d5a6a8b94f21d06b2af815a54950475}{operator=}} (const \mbox{\hyperlink{classsingelton__pattern}{singelton\+\_\+pattern}} \&other)=delete
+\begin{DoxyCompactList}\small\item\em Singlteon should nto be assignable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsingelton__pattern_ad78356cd9b72bd8f5d5bbefefd601012}{set\+\_\+dummy\+\_\+value}} (string value)
+\begin{DoxyCompactList}\small\item\em Set the dummy value object. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classsingelton__pattern_ad1ab2a01976d58fdcb3293d15836305d}{get\+\_\+dummy\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em Get the dummy value object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,19 +37,54 @@ Destroy the singelton pattern object.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00039\ \ \ \ \ \{}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(instance\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ instance\_count)\{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}singleton\_pattern\ classs\ object\ destroyed"{}}\ <<\ std::endl;}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ instance\_count-\/-\/;}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ instance;\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(instance\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ instance\_count)\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}singleton\_pattern\ classs\ object\ destroyed"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ instance\_count-\/-\/;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ instance;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
 
 \end{DoxyCode}
+\Hypertarget{classsingelton__pattern_abb1a67461114d4201e511453669ada9e}\label{classsingelton__pattern_abb1a67461114d4201e511453669ada9e} 
+\index{singelton\_pattern@{singelton\_pattern}!singelton\_pattern@{singelton\_pattern}}
+\index{singelton\_pattern@{singelton\_pattern}!singelton\_pattern@{singelton\_pattern}}
+\doxysubsubsection{\texorpdfstring{singelton\_pattern()}{singelton\_pattern()}}
+{\footnotesize\ttfamily singelton\+\_\+pattern\+::singelton\+\_\+pattern (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsingelton__pattern}{singelton\+\_\+pattern}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The singleton should not be cloneable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em singleton\+\_\+pattern} & object \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classsingelton__pattern_ad1ab2a01976d58fdcb3293d15836305d}\label{classsingelton__pattern_ad1ab2a01976d58fdcb3293d15836305d} 
+\index{singelton\_pattern@{singelton\_pattern}!get\_dummy\_value@{get\_dummy\_value}}
+\index{get\_dummy\_value@{get\_dummy\_value}!singelton\_pattern@{singelton\_pattern}}
+\doxysubsubsection{\texorpdfstring{get\_dummy\_value()}{get\_dummy\_value()}}
+{\footnotesize\ttfamily string singelton\+\_\+pattern\+::get\+\_\+dummy\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the dummy value object. 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordflow}{return}\ dummy\_value;}
+\DoxyCodeLine{00099\ \}}
+
+\end{DoxyCode}
 \Hypertarget{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3}\label{classsingelton__pattern_a2d5811a41179b788c66674eacb1f4de3} 
 \index{singelton\_pattern@{singelton\_pattern}!get\_instance\_count@{get\_instance\_count}}
 \index{get\_instance\_count@{get\_instance\_count}!singelton\_pattern@{singelton\_pattern}}
@@ -58,9 +101,9 @@ int
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ instance\_count;}
-\DoxyCodeLine{00065\ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ instance\_count;}
+\DoxyCodeLine{00082\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377}\label{classsingelton__pattern_ab71eb24168ca00b1f4a5359405e2d377} 
@@ -75,21 +118,58 @@ Get the singleton object object ~\newline
  
 
 \begin{DoxyReturn}{Returns}
-singelton\+\_\+pattern\texorpdfstring{$\ast$}{*} 
+\doxylink{classsingelton__pattern}{singelton\+\_\+pattern} object refernce 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00052\ \ \ \ \ }
-\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{if}(instance\ ==\ \textcolor{keyword}{nullptr})\{}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}();}
-\DoxyCodeLine{00055\ \ \ \ \ \}}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
-\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{if}(instance\ ==\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classsingelton__pattern}{singelton\_pattern}}();}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsingelton__pattern_a5d5a6a8b94f21d06b2af815a54950475}\label{classsingelton__pattern_a5d5a6a8b94f21d06b2af815a54950475} 
+\index{singelton\_pattern@{singelton\_pattern}!operator=@{operator=}}
+\index{operator=@{operator=}!singelton\_pattern@{singelton\_pattern}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily void singelton\+\_\+pattern\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsingelton__pattern}{singelton\+\_\+pattern}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+Singlteon should nto be assignable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em singleton\+\_\+pattern} & object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsingelton__pattern_ad78356cd9b72bd8f5d5bbefefd601012}\label{classsingelton__pattern_ad78356cd9b72bd8f5d5bbefefd601012} 
+\index{singelton\_pattern@{singelton\_pattern}!set\_dummy\_value@{set\_dummy\_value}}
+\index{set\_dummy\_value@{set\_dummy\_value}!singelton\_pattern@{singelton\_pattern}}
+\doxysubsubsection{\texorpdfstring{set\_dummy\_value()}{set\_dummy\_value()}}
+{\footnotesize\ttfamily void singelton\+\_\+pattern\+::set\+\_\+dummy\+\_\+value (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the dummy value object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & value \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ dummy\_value\ =\ value;}
+\DoxyCodeLine{00091\ \}}
 
 \end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/\mbox{\hyperlink{singelton__pattern_8cpp}{singelton\+\_\+pattern.\+cpp}}\end{DoxyCompactItemize}
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/singleton/\mbox{\hyperlink{singelton__pattern_8cpp}{singelton\+\_\+pattern.\+cpp}}\end{DoxyCompactItemize}

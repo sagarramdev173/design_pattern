@@ -1,3 +1,14 @@
+/**
+ * @file thread_safe_singleton.cpp
+ * @author Sagar Ramdev (sagar.ramdev@gmail.com)
+ * @brief Creates thread safe singleton objects
+ * @version 0.1
+ * @date 2024-05-18
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
+
 #include <iostream>
 #include <mutex>
 #include <thread>
@@ -65,8 +76,13 @@ void threadbar(){
     std::cout << "getting dummy value : " << s1->get_dummy_value() << std::endl;
     
 }
-
+/**
+ * @brief main function to demo the threadsafe singleton
+ * 
+ * @return int 
+ */
 int main(){
+    
     /// creating two threads
     std::thread t1(threadfoo);
     std::thread t2(threadbar);

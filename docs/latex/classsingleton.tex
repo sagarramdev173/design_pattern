@@ -1,0 +1,72 @@
+\doxysection{singleton Class Reference}
+\hypertarget{classsingleton}{}\label{classsingleton}\index{singleton@{singleton}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classsingleton_a137b688a14be4da9e83aae632bc3798b}{get\+\_\+dummy\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em Get the dummy value object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsingleton}{singleton}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsingleton_a878517b00c9a29ce3d57627bf8119d44}{get\+\_\+instance}} (const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Get the instance object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsingleton_a137b688a14be4da9e83aae632bc3798b}\label{classsingleton_a137b688a14be4da9e83aae632bc3798b} 
+\index{singleton@{singleton}!get\_dummy\_value@{get\_dummy\_value}}
+\index{get\_dummy\_value@{get\_dummy\_value}!singleton@{singleton}}
+\doxysubsubsection{\texorpdfstring{get\_dummy\_value()}{get\_dummy\_value()}}
+{\footnotesize\ttfamily std\+::string singleton\+::get\+\_\+dummy\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the dummy value object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dummy\_value;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classsingleton_a878517b00c9a29ce3d57627bf8119d44}\label{classsingleton_a878517b00c9a29ce3d57627bf8119d44} 
+\index{singleton@{singleton}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!singleton@{singleton}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classsingleton}{singleton}} \texorpdfstring{$\ast$}{*} singleton\+::get\+\_\+instance (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Get the instance object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+singleton\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(instance\ ==\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mtx.lock();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(instance\ ==\ \textcolor{keyword}{nullptr})\{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ instance\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classsingleton}{singleton}}(value);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mtx.unlock();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/singleton/\mbox{\hyperlink{thread__safe__singleton_8cpp}{thread\+\_\+safe\+\_\+singleton.\+cpp}}\end{DoxyCompactItemize}

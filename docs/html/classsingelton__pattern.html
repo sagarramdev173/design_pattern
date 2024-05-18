@@ -84,6 +84,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a833662b58d18accb7642380e3df8a3d8" id="r_a833662b58d18accb7642380e3df8a3d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a833662b58d18accb7642380e3df8a3d8">~singelton_pattern</a> ()</td></tr>
 <tr class="memdesc:a833662b58d18accb7642380e3df8a3d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the singelton pattern object.  <br /></td></tr>
 <tr class="separator:a833662b58d18accb7642380e3df8a3d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb1a67461114d4201e511453669ada9e" id="r_abb1a67461114d4201e511453669ada9e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb1a67461114d4201e511453669ada9e">singelton_pattern</a> (const <a class="el" href="classsingelton__pattern.html">singelton_pattern</a> &amp;other)=delete</td></tr>
+<tr class="memdesc:abb1a67461114d4201e511453669ada9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The singleton should not be cloneable.  <br /></td></tr>
+<tr class="separator:abb1a67461114d4201e511453669ada9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5a6a8b94f21d06b2af815a54950475" id="r_a5d5a6a8b94f21d06b2af815a54950475"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d5a6a8b94f21d06b2af815a54950475">operator=</a> (const <a class="el" href="classsingelton__pattern.html">singelton_pattern</a> &amp;other)=delete</td></tr>
+<tr class="memdesc:a5d5a6a8b94f21d06b2af815a54950475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singlteon should nto be assignable.  <br /></td></tr>
+<tr class="separator:a5d5a6a8b94f21d06b2af815a54950475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad78356cd9b72bd8f5d5bbefefd601012" id="r_ad78356cd9b72bd8f5d5bbefefd601012"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad78356cd9b72bd8f5d5bbefefd601012">set_dummy_value</a> (string value)</td></tr>
+<tr class="memdesc:ad78356cd9b72bd8f5d5bbefefd601012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the dummy value object.  <br /></td></tr>
+<tr class="separator:ad78356cd9b72bd8f5d5bbefefd601012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ab2a01976d58fdcb3293d15836305d" id="r_ad1ab2a01976d58fdcb3293d15836305d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad1ab2a01976d58fdcb3293d15836305d">get_dummy_value</a> ()</td></tr>
+<tr class="memdesc:ad1ab2a01976d58fdcb3293d15836305d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the dummy value object.  <br /></td></tr>
+<tr class="separator:ad1ab2a01976d58fdcb3293d15836305d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -121,18 +133,82 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destroy the singelton pattern object. </p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>    {</div>
-<div class="line"><span class="lineno">   40</span>        <span class="keywordflow">if</span>(instance != <span class="keyword">nullptr</span> &amp;&amp; instance_count){</div>
-<div class="line"><span class="lineno">   41</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;singleton_pattern classs object destroyed&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   42</span>        instance_count--;</div>
-<div class="line"><span class="lineno">   43</span>        <span class="keyword">delete</span> instance;        </div>
-<div class="line"><span class="lineno">   44</span>        instance = <span class="keyword">nullptr</span>;        </div>
-<div class="line"><span class="lineno">   45</span>        }</div>
-<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>    {</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keywordflow">if</span>(instance != <span class="keyword">nullptr</span> &amp;&amp; instance_count){</div>
+<div class="line"><span class="lineno">   43</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;singleton_pattern classs object destroyed&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   44</span>        instance_count--;</div>
+<div class="line"><span class="lineno">   45</span>        <span class="keyword">delete</span> instance;        </div>
+<div class="line"><span class="lineno">   46</span>        instance = <span class="keyword">nullptr</span>;        </div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="abb1a67461114d4201e511453669ada9e" name="abb1a67461114d4201e511453669ada9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb1a67461114d4201e511453669ada9e">&#9670;&#160;</a></span>singelton_pattern()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">singelton_pattern::singelton_pattern </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsingelton__pattern.html">singelton_pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The singleton should not be cloneable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">singleton_pattern</td><td>object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad1ab2a01976d58fdcb3293d15836305d" name="ad1ab2a01976d58fdcb3293d15836305d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ab2a01976d58fdcb3293d15836305d">&#9670;&#160;</a></span>get_dummy_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string singelton_pattern::get_dummy_value </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the dummy value object. </p>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   97</span>                        {</div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">return</span> dummy_value;</div>
+<div class="line"><span class="lineno">   99</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a2d5811a41179b788c66674eacb1f4de3" name="a2d5811a41179b788c66674eacb1f4de3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d5811a41179b788c66674eacb1f4de3">&#9670;&#160;</a></span>get_instance_count()</h2>
 
@@ -159,9 +235,9 @@ Static Public Member Functions</h2></td></tr>
 <p>Get the instance count object (how many insatcens fo the class is avaiable) <br  />
  </p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   63</span>                               {</div>
-<div class="line"><span class="lineno">   64</span>    <span class="keywordflow">return</span> instance_count;</div>
-<div class="line"><span class="lineno">   65</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   80</span>                               {</div>
+<div class="line"><span class="lineno">   81</span>    <span class="keywordflow">return</span> instance_count;</div>
+<div class="line"><span class="lineno">   82</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -190,20 +266,89 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get the singleton object object <br  />
  </p>
-<dl class="section return"><dt>Returns</dt><dd>singelton_pattern* </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>                                                {</div>
-<div class="line"><span class="lineno">   52</span>    </div>
-<div class="line"><span class="lineno">   53</span>    <span class="keywordflow">if</span>(instance == <span class="keyword">nullptr</span>){</div>
-<div class="line"><span class="lineno">   54</span>        instance = <span class="keyword">new</span> <a class="code hl_class" href="classsingelton__pattern.html">singelton_pattern</a>();</div>
-<div class="line"><span class="lineno">   55</span>    }</div>
-<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">return</span> instance;</div>
-<div class="line"><span class="lineno">   57</span>    }</div>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classsingelton__pattern.html">singelton_pattern</a> object refernce </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                {</div>
+<div class="line"><span class="lineno">   69</span>    </div>
+<div class="line"><span class="lineno">   70</span>    <span class="keywordflow">if</span>(instance == <span class="keyword">nullptr</span>){</div>
+<div class="line"><span class="lineno">   71</span>        instance = <span class="keyword">new</span> <a class="code hl_class" href="classsingelton__pattern.html">singelton_pattern</a>();</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+<div class="line"><span class="lineno">   73</span>    <span class="keywordflow">return</span> instance;</div>
+<div class="line"><span class="lineno">   74</span>    }</div>
 <div class="ttc" id="aclasssingelton__pattern_html"><div class="ttname"><a href="classsingelton__pattern.html">singelton_pattern</a></div><div class="ttdef"><b>Definition</b> singelton_pattern.cpp:16</div></div>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a5d5a6a8b94f21d06b2af815a54950475" name="a5d5a6a8b94f21d06b2af815a54950475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5a6a8b94f21d06b2af815a54950475">&#9670;&#160;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void singelton_pattern::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsingelton__pattern.html">singelton_pattern</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Singlteon should nto be assignable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">singleton_pattern</td><td>object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad78356cd9b72bd8f5d5bbefefd601012" name="ad78356cd9b72bd8f5d5bbefefd601012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad78356cd9b72bd8f5d5bbefefd601012">&#9670;&#160;</a></span>set_dummy_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void singelton_pattern::set_dummy_value </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the dummy value object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>value </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">   89</span>                                  {</div>
+<div class="line"><span class="lineno">   90</span>    dummy_value = value;</div>
+<div class="line"><span class="lineno">   91</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/sagar/design_pattern/creational_design_patterns/<a class="el" href="singelton__pattern_8cpp.html">singelton_pattern.cpp</a></li>
+<li>/home/sagar/design_pattern/creational_design_patterns/singleton/<a class="el" href="singelton__pattern_8cpp.html">singelton_pattern.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

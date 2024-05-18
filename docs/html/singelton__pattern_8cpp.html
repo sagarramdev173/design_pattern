@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Design patterns in cpp: /home/sagar/design_pattern/creational_design_patterns/singelton_pattern.cpp File Reference</title>
+<title>Design patterns in cpp: /home/sagar/design_pattern/creational_design_patterns/singleton/singelton_pattern.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_6b7031ae16d66f9a9a5a236052475375.html">creational_design_patterns</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_6b7031ae16d66f9a9a5a236052475375.html">creational_design_patterns</a></li><li class="navelem"><a class="el" href="dir_1aca1cf9907b8be84b5015d9756c4305.html">singleton</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -129,17 +129,24 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">   80</span>{</div>
-<div class="line"><span class="lineno">   81</span>    <span class="comment">/* code */</span></div>
-<div class="line"><span class="lineno">   82</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;instance count : &quot;</span> &lt;&lt; <a class="code hl_function" href="classsingelton__pattern.html#a2d5811a41179b788c66674eacb1f4de3">singelton_pattern::get_instance_count</a>() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   83</span>    <a class="code hl_class" href="classsingelton__pattern.html">singelton_pattern</a> *s1 = <a class="code hl_function" href="classsingelton__pattern.html#ab71eb24168ca00b1f4a5359405e2d377">singelton_pattern::get_singleton_object</a>();</div>
-<div class="line"><span class="lineno">   84</span>    <a class="code hl_class" href="classsingelton__pattern.html">singelton_pattern</a> *s2 = <a class="code hl_function" href="classsingelton__pattern.html#ab71eb24168ca00b1f4a5359405e2d377">singelton_pattern::get_singleton_object</a>();</div>
-<div class="line"><span class="lineno">   85</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;instance count : &quot;</span> &lt;&lt; <a class="code hl_function" href="classsingelton__pattern.html#a2d5811a41179b788c66674eacb1f4de3">singelton_pattern::get_instance_count</a>() &lt;&lt; std::endl;</div>
-<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   87</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  114</span>{</div>
+<div class="line"><span class="lineno">  115</span>    <span class="comment">/* code */</span></div>
+<div class="line"><span class="lineno">  116</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;instance count : &quot;</span> &lt;&lt; <a class="code hl_function" href="classsingelton__pattern.html#a2d5811a41179b788c66674eacb1f4de3">singelton_pattern::get_instance_count</a>() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  117</span>    <a class="code hl_class" href="classsingelton__pattern.html">singelton_pattern</a> *s1 = <a class="code hl_function" href="classsingelton__pattern.html#ab71eb24168ca00b1f4a5359405e2d377">singelton_pattern::get_singleton_object</a>();    </div>
+<div class="line"><span class="lineno">  118</span>    <a class="code hl_class" href="classsingelton__pattern.html">singelton_pattern</a> *s2 = <a class="code hl_function" href="classsingelton__pattern.html#ab71eb24168ca00b1f4a5359405e2d377">singelton_pattern::get_singleton_object</a>();</div>
+<div class="line"><span class="lineno">  119</span> </div>
+<div class="line"><span class="lineno">  120</span>    <span class="comment">//setting the dummy vlaue and observing that only one instance is created</span></div>
+<div class="line"><span class="lineno">  121</span>    s1-&gt;<a class="code hl_function" href="classsingelton__pattern.html#ad78356cd9b72bd8f5d5bbefefd601012">set_dummy_value</a>(<span class="stringliteral">&quot;demo&quot;</span>);</div>
+<div class="line"><span class="lineno">  122</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;Getting the object dumy value : &quot;</span> &lt;&lt; s2-&gt;<a class="code hl_function" href="classsingelton__pattern.html#ad1ab2a01976d58fdcb3293d15836305d">get_dummy_value</a>() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  123</span>    </div>
+<div class="line"><span class="lineno">  124</span>    std::cout &lt;&lt; <span class="stringliteral">&quot;instance count : &quot;</span> &lt;&lt; <a class="code hl_function" href="classsingelton__pattern.html#a2d5811a41179b788c66674eacb1f4de3">singelton_pattern::get_instance_count</a>() &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><span class="lineno">  126</span>}</div>
 <div class="ttc" id="aclasssingelton__pattern_html"><div class="ttname"><a href="classsingelton__pattern.html">singelton_pattern</a></div><div class="ttdef"><b>Definition</b> singelton_pattern.cpp:16</div></div>
-<div class="ttc" id="aclasssingelton__pattern_html_a2d5811a41179b788c66674eacb1f4de3"><div class="ttname"><a href="classsingelton__pattern.html#a2d5811a41179b788c66674eacb1f4de3">singelton_pattern::get_instance_count</a></div><div class="ttdeci">static int get_instance_count()</div><div class="ttdoc">Get the instance count object (how many insatcens fo the class is avaiable)</div><div class="ttdef"><b>Definition</b> singelton_pattern.cpp:63</div></div>
-<div class="ttc" id="aclasssingelton__pattern_html_ab71eb24168ca00b1f4a5359405e2d377"><div class="ttname"><a href="classsingelton__pattern.html#ab71eb24168ca00b1f4a5359405e2d377">singelton_pattern::get_singleton_object</a></div><div class="ttdeci">static singelton_pattern * get_singleton_object()</div><div class="ttdoc">Get the singleton object object</div><div class="ttdef"><b>Definition</b> singelton_pattern.cpp:51</div></div>
+<div class="ttc" id="aclasssingelton__pattern_html_a2d5811a41179b788c66674eacb1f4de3"><div class="ttname"><a href="classsingelton__pattern.html#a2d5811a41179b788c66674eacb1f4de3">singelton_pattern::get_instance_count</a></div><div class="ttdeci">static int get_instance_count()</div><div class="ttdoc">Get the instance count object (how many insatcens fo the class is avaiable)</div><div class="ttdef"><b>Definition</b> singelton_pattern.cpp:80</div></div>
+<div class="ttc" id="aclasssingelton__pattern_html_ab71eb24168ca00b1f4a5359405e2d377"><div class="ttname"><a href="classsingelton__pattern.html#ab71eb24168ca00b1f4a5359405e2d377">singelton_pattern::get_singleton_object</a></div><div class="ttdeci">static singelton_pattern * get_singleton_object()</div><div class="ttdoc">Get the singleton object object</div><div class="ttdef"><b>Definition</b> singelton_pattern.cpp:68</div></div>
+<div class="ttc" id="aclasssingelton__pattern_html_ad1ab2a01976d58fdcb3293d15836305d"><div class="ttname"><a href="classsingelton__pattern.html#ad1ab2a01976d58fdcb3293d15836305d">singelton_pattern::get_dummy_value</a></div><div class="ttdeci">string get_dummy_value()</div><div class="ttdoc">Get the dummy value object.</div><div class="ttdef"><b>Definition</b> singelton_pattern.cpp:97</div></div>
+<div class="ttc" id="aclasssingelton__pattern_html_ad78356cd9b72bd8f5d5bbefefd601012"><div class="ttname"><a href="classsingelton__pattern.html#ad78356cd9b72bd8f5d5bbefefd601012">singelton_pattern::set_dummy_value</a></div><div class="ttdeci">void set_dummy_value(string value)</div><div class="ttdoc">Set the dummy value object.</div><div class="ttdef"><b>Definition</b> singelton_pattern.cpp:89</div></div>
 </div><!-- fragment -->
 </div>
 </div>
