@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['pattern_0',['Abstract factory design pattern',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html#autotoc_md3',1,'']]],
-  ['pattern_1',['Factory design pattern',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html',1,'']]],
-  ['pattern_2',['steps to create single design pattern',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2singleton_2Singeltion.html#autotoc_md6',1,'']]],
-  ['patterns_3',['Design patterns',['../index.html',1,'']]],
-  ['problem_4',['Problem',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html#autotoc_md1',1,'']]],
-  ['problem_20it_20solves_5',['Problem it solves',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html#autotoc_md4',1,'']]]
+  ['main_0',['main',['../observer__pattern_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;observer_pattern.cpp'],['../abstract__factory_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;abstract_factory.cpp'],['../factory__pattern_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;factory_pattern.cpp'],['../singelton__pattern_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089',1,'main(int argc, char const *argv[]):&#160;singelton_pattern.cpp'],['../thread__safe__singleton_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;thread_safe_singleton.cpp']]]
 ];

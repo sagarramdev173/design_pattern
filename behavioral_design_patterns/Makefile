@@ -1,4 +1,4 @@
-SUBDIRS := 
+SUBDIRS := Observer
 
 .PHONY: all clean $(SUBDIRS)
 

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['operator_3d_0',['operator=',['../classsingelton__pattern.html#a5d5a6a8b94f21d06b2af815a54950475',1,'singelton_pattern']]]
+  ['linuxbutton_0',['LinuxButton',['../classLinuxButton.html',1,'']]],
+  ['linuxdialogbox_1',['LinuxDialogBox',['../classLinuxDialogBox.html',1,'']]],
+  ['linuxfactory_2',['LinuxFactory',['../classLinuxFactory.html',1,'']]]
 ];

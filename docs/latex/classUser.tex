@@ -1,0 +1,64 @@
+\doxysection{User Class Reference}
+\hypertarget{classUser}{}\label{classUser}\index{User@{User}}
+
+
+\doxylink{classUser}{User} class implements subscriber where each user is a subscriber with a unique id and receives notification from the service.  
+
+
+Inheritance diagram for User\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUser}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUser_a6e84637389bc36a13300df82a7387bb0}{User}} (int id)
+\item 
+void \mbox{\hyperlink{classUser_ac8a3c6d310cbd53abc071e74dd0f7bb8}{notify}} (string value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classUser}{User} class implements subscriber where each user is a subscriber with a unique id and receives notification from the service. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classUser_a6e84637389bc36a13300df82a7387bb0}\label{classUser_a6e84637389bc36a13300df82a7387bb0} 
+\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily User\+::\+User (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>userid\ =\ id;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classUser_ac8a3c6d310cbd53abc071e74dd0f7bb8}\label{classUser_ac8a3c6d310cbd53abc071e74dd0f7bb8} 
+\index{User@{User}!notify@{notify}}
+\index{notify@{notify}!User@{User}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void User\+::notify (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classISubscriber}{ISubscriber}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}User:\ "{}}<<userid\ <<\ \textcolor{stringliteral}{"{}\ notified\ with:\ "{}}\ <<\ value\ <<\ endl;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/behavioral\+\_\+design\+\_\+patterns/\+Observer/\mbox{\hyperlink{observer__pattern_8cpp}{observer\+\_\+pattern.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,86 @@
+\doxysection{/home/sagar/design\+\_\+pattern/behavioral\+\_\+design\+\_\+patterns/\+Observer/observer\+\_\+pattern.cpp File Reference}
+\hypertarget{observer__pattern_8cpp}{}\label{observer__pattern_8cpp}\index{/home/sagar/design\_pattern/behavioral\_design\_patterns/Observer/observer\_pattern.cpp@{/home/sagar/design\_pattern/behavioral\_design\_patterns/Observer/observer\_pattern.cpp}}
+
+
+This Design Pattern is used to implement observer pattern where observer act as a subscriber to the service given by publisher or subject.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$iterator$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classISubscriber}{ISubscriber}}
+\begin{DoxyCompactList}\small\item\em subscriber interface \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classUser}{User}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classUser}{User} class implements subscriber where each user is a subscriber with a unique id and receives notification from the service. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classIPublisher}{IPublisher}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classPublisher}{Publisher} interface with basic attach ,detach and notify methods. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPublisher}{Publisher}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classPublisher}{Publisher} class implements publisher interface with basic attach ,detach and notify methods and maintins a list of subscribers in list of subscribers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{observer__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main function to test the observer pattern \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Design Pattern is used to implement observer pattern where observer act as a subscriber to the service given by publisher or subject. 
+
+\begin{DoxyAuthor}{Author}
+Sagar Ramdev (\href{mailto:sagarramdev173@gmail.com}{\texttt{ sagarramdev173@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/18
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{observer__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{observer__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089} 
+\index{observer\_pattern.cpp@{observer\_pattern.cpp}!main@{main}}
+\index{main@{main}!observer\_pattern.cpp@{observer\_pattern.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main function to test the observer pattern 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \{}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{classUser}{User}}\ *user1\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classUser}{User}}(1);}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{classUser}{User}}\ *user2\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classUser}{User}}(2);}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classUser}{User}}\ *user3\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classUser}{User}}(3);}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{classPublisher}{Publisher}}\ *pub\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classPublisher}{Publisher}}();}
+\DoxyCodeLine{00095\ \ \ \ \ pub-\/>attach(user1);}
+\DoxyCodeLine{00096\ \ \ \ \ pub-\/>attach(user2);}
+\DoxyCodeLine{00097\ \ \ \ \ pub-\/>attach(user3);}
+\DoxyCodeLine{00098\ \ \ \ \ pub-\/>notifySubscribers(\textcolor{stringliteral}{"{}Hello\ World"{}});}
+\DoxyCodeLine{00099\ \ \ \ \ pub-\/>detach(user2);}
+\DoxyCodeLine{00100\ \ \ \ \ pub-\/>notifySubscribers(\textcolor{stringliteral}{"{}Hello\ India"{}});}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vehicalfactory_0',['VehicalFactory',['../classVehicalFactory.html',1,'']]],
-  ['vehicle_1',['Vehicle',['../classVehicle.html',1,'']]]
+  ['singelton_5fpattern_0',['singelton_pattern',['../classsingelton__pattern.html',1,'']]],
+  ['singleton_1',['singleton',['../classsingleton.html',1,'']]]
 ];

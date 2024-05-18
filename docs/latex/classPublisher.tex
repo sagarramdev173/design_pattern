@@ -1,0 +1,86 @@
+\doxysection{Publisher Class Reference}
+\hypertarget{classPublisher}{}\label{classPublisher}\index{Publisher@{Publisher}}
+
+
+\doxylink{classPublisher}{Publisher} class implements publisher interface with basic attach ,detach and notify methods and maintins a list of subscribers in list of subscribers.  
+
+
+Inheritance diagram for Publisher\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classPublisher}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPublisher_a028b04ecc1fdf16fd0ab3194b60d0cae}{attach}} (\mbox{\hyperlink{classISubscriber}{ISubscriber}} \texorpdfstring{$\ast$}{*}sub)
+\item 
+void \mbox{\hyperlink{classPublisher_af692546cb32ff8483e5fccbf6613d28d}{detach}} (\mbox{\hyperlink{classISubscriber}{ISubscriber}} \texorpdfstring{$\ast$}{*}sub)
+\item 
+void \mbox{\hyperlink{classPublisher_ab87dc016b6cc30c31ca66473391053d7}{notify\+Subscribers}} (string msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classPublisher}{Publisher} class implements publisher interface with basic attach ,detach and notify methods and maintins a list of subscribers in list of subscribers. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPublisher_a028b04ecc1fdf16fd0ab3194b60d0cae}\label{classPublisher_a028b04ecc1fdf16fd0ab3194b60d0cae} 
+\index{Publisher@{Publisher}!attach@{attach}}
+\index{attach@{attach}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Publisher\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classISubscriber}{ISubscriber}} \texorpdfstring{$\ast$}{*}}]{sub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIPublisher}{IPublisher}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ subscribers.push\_back(sub);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPublisher_af692546cb32ff8483e5fccbf6613d28d}\label{classPublisher_af692546cb32ff8483e5fccbf6613d28d} 
+\index{Publisher@{Publisher}!detach@{detach}}
+\index{detach@{detach}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Publisher\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classISubscriber}{ISubscriber}} \texorpdfstring{$\ast$}{*}}]{sub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIPublisher}{IPublisher}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ subscribers.remove(sub);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classPublisher_ab87dc016b6cc30c31ca66473391053d7}\label{classPublisher_ab87dc016b6cc30c31ca66473391053d7} 
+\index{Publisher@{Publisher}!notifySubscribers@{notifySubscribers}}
+\index{notifySubscribers@{notifySubscribers}!Publisher@{Publisher}}
+\doxysubsubsection{\texorpdfstring{notifySubscribers()}{notifySubscribers()}}
+{\footnotesize\ttfamily void Publisher\+::notify\+Subscribers (\begin{DoxyParamCaption}\item[{string}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classIPublisher}{IPublisher}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\ sub:\ subscribers)\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sub-\/>notify(msg);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/behavioral\+\_\+design\+\_\+patterns/\+Observer/\mbox{\hyperlink{observer__pattern_8cpp}{observer\+\_\+pattern.\+cpp}}\end{DoxyCompactItemize}
