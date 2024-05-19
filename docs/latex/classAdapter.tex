@@ -1,0 +1,70 @@
+\doxysection{Adapter Class Reference}
+\hypertarget{classAdapter}{}\label{classAdapter}\index{Adapter@{Adapter}}
+
+
+\doxylink{classAdapter}{Adapter} class which converts xml data to json and overrides the analyse\+Data method in which it will process the xml data but gives the simulation that it processing json data.  
+
+
+Inheritance diagram for Adapter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAdapter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAdapter_a824d0be1ed5f5e339cd7ddb72330c343}{Adapter}} (\mbox{\hyperlink{classXMLData}{XMLData}} \texorpdfstring{$\ast$}{*}p\+XMLdata)
+\item 
+void \mbox{\hyperlink{classAdapter_a8fa8c2fcea1b8ceff49091e392e514b9}{analyse\+Data}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDataAnalyticsTool}{Data\+Analytics\+Tool}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDataAnalyticsTool_a10e524ecfbabb573994b38b71065c70a}{Data\+Analytics\+Tool}} (string data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classAdapter}{Adapter} class which converts xml data to json and overrides the analyse\+Data method in which it will process the xml data but gives the simulation that it processing json data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAdapter_a824d0be1ed5f5e339cd7ddb72330c343}\label{classAdapter_a824d0be1ed5f5e339cd7ddb72330c343} 
+\index{Adapter@{Adapter}!Adapter@{Adapter}}
+\index{Adapter@{Adapter}!Adapter@{Adapter}}
+\doxysubsubsection{\texorpdfstring{Adapter()}{Adapter()}}
+{\footnotesize\ttfamily Adapter\+::\+Adapter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classXMLData}{XMLData}} \texorpdfstring{$\ast$}{*}}]{p\+XMLdata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}\ -\/>pXMLdata\ =\ pXMLdata;}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAdapter_a8fa8c2fcea1b8ceff49091e392e514b9}\label{classAdapter_a8fa8c2fcea1b8ceff49091e392e514b9} 
+\index{Adapter@{Adapter}!analyseData@{analyseData}}
+\index{analyseData@{analyseData}!Adapter@{Adapter}}
+\doxysubsubsection{\texorpdfstring{analyseData()}{analyseData()}}
+{\footnotesize\ttfamily void Adapter\+::analyse\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classDataAnalyticsTool}{Data\+Analytics\+Tool}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ data\ =\ pXMLdata-\/>getXMLData();}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ cout<<\ \textcolor{stringliteral}{"{}Converting\ XML\ to\ JSON:\ "{}}\ <<\ data\ <<\ endl;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/structural\+\_\+design\+\_\+patterns/\+Adapter/\mbox{\hyperlink{adapter__pattern_8cpp}{adapter\+\_\+pattern.\+cpp}}\end{DoxyCompactItemize}

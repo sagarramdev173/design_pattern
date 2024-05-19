@@ -6,7 +6,7 @@ var searchData=
   ['single_20design_20pattern_3',['steps to create single design pattern',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2singleton_2Singeltion.html#autotoc_md9',1,'']]],
   ['singleton_4',['singleton',['../classsingleton.html',1,'']]],
   ['singleton_5',['Singleton',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2singleton_2Singeltion.html',1,'']]],
-  ['solution_6',['Solution',['../md__2home_2sagar_2design__pattern_2behavioral__design__patterns_2Observer_2README.html#autotoc_md2',1,'Solution'],['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html#autotoc_md5',1,'Solution']]],
+  ['solution_6',['Solution',['../md__2home_2sagar_2design__pattern_2behavioral__design__patterns_2Observer_2README.html#autotoc_md2',1,'Solution'],['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html#autotoc_md5',1,'Solution'],['../md__2home_2sagar_2design__pattern_2structural__design__patterns_2Adapter_2README.html#autotoc_md13',1,'Solution']]],
   ['solves_7',['Problem it solves',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2factory__method_2README.html#autotoc_md7',1,'']]],
   ['steps_20to_20create_20single_20design_20pattern_8',['steps to create single design pattern',['../md__2home_2sagar_2design__pattern_2creational__design__patterns_2singleton_2Singeltion.html#autotoc_md9',1,'']]],
   ['subscriber_20design_20pattern_9',['Observer (Also known as: Event-Subscriber) Design pattern',['../md__2home_2sagar_2design__pattern_2behavioral__design__patterns_2Observer_2README.html',1,'']]]

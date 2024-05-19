@@ -1,4 +1,4 @@
-SUBDIRS := 
+SUBDIRS := Adapter
 
 .PHONY: all clean $(SUBDIRS)
 

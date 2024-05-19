@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Design patterns in cpp: File Members</title>
+<title>Design patterns in cpp: client Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -48,7 +48,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -70,10 +69,57 @@ $(function() {
 </div>
 </div>
 
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classclient-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">client Class Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented file members with links to the documentation:</div><ul>
-<li>main()&#160;:&#160;<a class="el" href="observer__pattern_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">observer_pattern.cpp</a>, <a class="el" href="abstract__factory_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">abstract_factory.cpp</a>, <a class="el" href="factory__pattern_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">factory_pattern.cpp</a>, <a class="el" href="singelton__pattern_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">singelton_pattern.cpp</a>, <a class="el" href="thread__safe__singleton_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">thread_safe_singleton.cpp</a>, <a class="el" href="adapter__pattern_8cpp.html#abf9e6b7e6f15df4b525a2e7705ba3089">adapter_pattern.cpp</a></li>
-<li>threadfoo()&#160;:&#160;<a class="el" href="thread__safe__singleton_8cpp.html#af28c90bebe37b4a82794aaed20a78c6c">thread_safe_singleton.cpp</a></li>
+
+<p>client class which process the data given by data analytics tool  
+ <a href="#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a979ee120f6d975d42dffefbbce53b5ad" id="r_a979ee120f6d975d42dffefbbce53b5ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a979ee120f6d975d42dffefbbce53b5ad">ProcessData</a> (<a class="el" href="classDataAnalyticsTool.html">DataAnalyticsTool</a> *tool)</td></tr>
+<tr class="separator:a979ee120f6d975d42dffefbbce53b5ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>client class which process the data given by data analytics tool </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a979ee120f6d975d42dffefbbce53b5ad" name="a979ee120f6d975d42dffefbbce53b5ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979ee120f6d975d42dffefbbce53b5ad">&#9670;&#160;</a></span>ProcessData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void client::ProcessData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classDataAnalyticsTool.html">DataAnalyticsTool</a> *</td>          <td class="paramname"><span class="paramname"><em>tool</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                             {        </div>
+<div class="line"><span class="lineno">   51</span>        cout&lt;&lt;<span class="stringliteral">&quot;inside the client class, i&#39;m going to process the data&quot;</span>&lt;&lt;endl;</div>
+<div class="line"><span class="lineno">   52</span>        tool-&gt;analyseData();</div>
+<div class="line"><span class="lineno">   53</span>    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/home/sagar/design_pattern/structural_design_patterns/Adapter/<a class="el" href="adapter__pattern_8cpp.html">adapter_pattern.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

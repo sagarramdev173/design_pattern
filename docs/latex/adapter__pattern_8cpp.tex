@@ -1,0 +1,75 @@
+\doxysection{/home/sagar/design\+\_\+pattern/structural\+\_\+design\+\_\+patterns/\+Adapter/adapter\+\_\+pattern.cpp File Reference}
+\hypertarget{adapter__pattern_8cpp}{}\label{adapter__pattern_8cpp}\index{/home/sagar/design\_pattern/structural\_design\_patterns/Adapter/adapter\_pattern.cpp@{/home/sagar/design\_pattern/structural\_design\_patterns/Adapter/adapter\_pattern.cpp}}
+
+
+Implementing adapter pattern where we can convert XML data to JSON data.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classXMLData}{XMLData}}
+\begin{DoxyCompactList}\small\item\em Xml data class which contains xml data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classDataAnalyticsTool}{Data\+Analytics\+Tool}}
+\begin{DoxyCompactList}\small\item\em Data analytics tool class which process the json data given to it. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classclient}{client}}
+\begin{DoxyCompactList}\small\item\em client class which process the data given by data analytics tool \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classAdapter}{Adapter}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classAdapter}{Adapter} class which converts xml data to json and overrides the analyse\+Data method in which it will process the xml data but gives the simulation that it processing json data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{adapter__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em main appilcation program to demonstrate adapter pattern \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementing adapter pattern where we can convert XML data to JSON data. 
+
+\begin{DoxyAuthor}{Author}
+Sagar ramdev (\href{mailto:sagarramdev173@gmail.com}{\texttt{ sagarramdev173@gmail.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/05-\/19
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{adapter__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{adapter__pattern_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089} 
+\index{adapter\_pattern.cpp@{adapter\_pattern.cpp}!main@{main}}
+\index{main@{main}!adapter\_pattern.cpp@{adapter\_pattern.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const \texorpdfstring{$\ast$}{*}}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+main appilcation program to demonstrate adapter pattern 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & \\
+\hline
+{\em argv} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00083\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classXMLData}{XMLData}}\ *data\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classXMLData}{XMLData}}(\textcolor{stringliteral}{"{}My\ sample\ XML\ data"{}});}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{classDataAnalyticsTool}{DataAnalyticsTool}}\ *tool\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classAdapter}{Adapter}}(data);}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{classclient}{client}}\ *app\_client\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classclient}{client}}();}
+\DoxyCodeLine{00087\ \ \ \ \ app\_client-\/>ProcessData(tool);}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00089\ \}}
+
+\end{DoxyCode}
