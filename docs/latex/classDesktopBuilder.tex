@@ -1,0 +1,71 @@
+\doxysection{Desktop\+Builder Class Reference}
+\hypertarget{classDesktopBuilder}{}\label{classDesktopBuilder}\index{DesktopBuilder@{DesktopBuilder}}
+
+
+Defining the abstract builder \doxylink{classDesktop}{Desktop} which is a interface for creating complex object by different concrete builders.  
+
+
+Inheritance diagram for Desktop\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classDesktopBuilder}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classDesktopBuilder_afb4821a3f310bd3579ecdd196445d753}\label{classDesktopBuilder_afb4821a3f310bd3579ecdd196445d753} 
+virtual void {\bfseries build\+Monitor} ()=0
+\item 
+\Hypertarget{classDesktopBuilder_a69903e8f7afb22af823777593bd87554}\label{classDesktopBuilder_a69903e8f7afb22af823777593bd87554} 
+virtual void {\bfseries build\+Keyboard} ()=0
+\item 
+\Hypertarget{classDesktopBuilder_a041383539ef9bca3d412f699723d2a55}\label{classDesktopBuilder_a041383539ef9bca3d412f699723d2a55} 
+virtual void {\bfseries build\+Mouse} ()=0
+\item 
+virtual \mbox{\hyperlink{classDesktop}{Desktop}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDesktopBuilder_a442ce8d125a25e6c490b4ce36b7ba7d1}{get\+Desktop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classDesktopBuilder_a8b2f27ec73329928a69a169537af45dc}\label{classDesktopBuilder_a8b2f27ec73329928a69a169537af45dc} 
+\mbox{\hyperlink{classDesktop}{Desktop}} \texorpdfstring{$\ast$}{*} {\bfseries desktop}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defining the abstract builder \doxylink{classDesktop}{Desktop} which is a interface for creating complex object by different concrete builders. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDesktopBuilder_a77c93badb7c8ecda28f082987c26eb8c}\label{classDesktopBuilder_a77c93badb7c8ecda28f082987c26eb8c} 
+\index{DesktopBuilder@{DesktopBuilder}!DesktopBuilder@{DesktopBuilder}}
+\index{DesktopBuilder@{DesktopBuilder}!DesktopBuilder@{DesktopBuilder}}
+\doxysubsubsection{\texorpdfstring{DesktopBuilder()}{DesktopBuilder()}}
+{\footnotesize\ttfamily Desktop\+Builder\+::\+Desktop\+Builder (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ desktop\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classDesktop}{Desktop}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDesktopBuilder_a442ce8d125a25e6c490b4ce36b7ba7d1}\label{classDesktopBuilder_a442ce8d125a25e6c490b4ce36b7ba7d1} 
+\index{DesktopBuilder@{DesktopBuilder}!getDesktop@{getDesktop}}
+\index{getDesktop@{getDesktop}!DesktopBuilder@{DesktopBuilder}}
+\doxysubsubsection{\texorpdfstring{getDesktop()}{getDesktop()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classDesktop}{Desktop}} \texorpdfstring{$\ast$}{*} Desktop\+Builder\+::get\+Desktop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \{\textcolor{keywordflow}{return}\ desktop;\}\ \ \ \ }
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/\+Builder/\mbox{\hyperlink{Builder__pattern_8cpp}{Builder\+\_\+pattern.\+cpp}}\end{DoxyCompactItemize}

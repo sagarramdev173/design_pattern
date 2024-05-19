@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['publisher_0',['Publisher',['../classPublisher.html',1,'']]]
+  ['normaldesktopbuilder_0',['NormalDesktopBuilder',['../classNormalDesktopBuilder.html',1,'']]]
 ];

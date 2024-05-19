@@ -1,0 +1,95 @@
+\doxysection{Normal\+Desktop\+Builder Class Reference}
+\hypertarget{classNormalDesktopBuilder}{}\label{classNormalDesktopBuilder}\index{NormalDesktopBuilder@{NormalDesktopBuilder}}
+
+
+Normal \doxylink{classDesktop}{Desktop} Builder is a concrete builder which will build normal desktop.  
+
+
+Inheritance diagram for Normal\+Desktop\+Builder\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classNormalDesktopBuilder}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classNormalDesktopBuilder_a97eaffd02e435bc0a1563021237a2ecc}{build\+Monitor}} ()
+\item 
+void \mbox{\hyperlink{classNormalDesktopBuilder_a300059910fd2e6e63a2261ce36dc25fe}{build\+Keyboard}} ()
+\item 
+void \mbox{\hyperlink{classNormalDesktopBuilder_a17daf1984961c90c7fea3683a26fde72}{build\+Mouse}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classDesktopBuilder}{Desktop\+Builder}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classDesktop}{Desktop}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classDesktopBuilder_a442ce8d125a25e6c490b4ce36b7ba7d1}{get\+Desktop}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classDesktopBuilder}{Desktop\+Builder}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDesktop}{Desktop}} \texorpdfstring{$\ast$}{*} {\bfseries desktop}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Normal \doxylink{classDesktop}{Desktop} Builder is a concrete builder which will build normal desktop. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classNormalDesktopBuilder_a300059910fd2e6e63a2261ce36dc25fe}\label{classNormalDesktopBuilder_a300059910fd2e6e63a2261ce36dc25fe} 
+\index{NormalDesktopBuilder@{NormalDesktopBuilder}!buildKeyboard@{buildKeyboard}}
+\index{buildKeyboard@{buildKeyboard}!NormalDesktopBuilder@{NormalDesktopBuilder}}
+\doxysubsubsection{\texorpdfstring{buildKeyboard()}{buildKeyboard()}}
+{\footnotesize\ttfamily void Normal\+Desktop\+Builder\+::build\+Keyboard (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classDesktopBuilder}{Desktop\+Builder}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ desktop-\/>setKeyboard(\textcolor{stringliteral}{"{}Normal\ keyboard"{}});}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNormalDesktopBuilder_a97eaffd02e435bc0a1563021237a2ecc}\label{classNormalDesktopBuilder_a97eaffd02e435bc0a1563021237a2ecc} 
+\index{NormalDesktopBuilder@{NormalDesktopBuilder}!buildMonitor@{buildMonitor}}
+\index{buildMonitor@{buildMonitor}!NormalDesktopBuilder@{NormalDesktopBuilder}}
+\doxysubsubsection{\texorpdfstring{buildMonitor()}{buildMonitor()}}
+{\footnotesize\ttfamily void Normal\+Desktop\+Builder\+::build\+Monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classDesktopBuilder}{Desktop\+Builder}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ desktop-\/>setMonitor(\textcolor{stringliteral}{"{}Normal\ monitor"{}});}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{classNormalDesktopBuilder_a17daf1984961c90c7fea3683a26fde72}\label{classNormalDesktopBuilder_a17daf1984961c90c7fea3683a26fde72} 
+\index{NormalDesktopBuilder@{NormalDesktopBuilder}!buildMouse@{buildMouse}}
+\index{buildMouse@{buildMouse}!NormalDesktopBuilder@{NormalDesktopBuilder}}
+\doxysubsubsection{\texorpdfstring{buildMouse()}{buildMouse()}}
+{\footnotesize\ttfamily void Normal\+Desktop\+Builder\+::build\+Mouse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classDesktopBuilder}{Desktop\+Builder}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ desktop-\/>setMouse(\textcolor{stringliteral}{"{}Normal\ mouse"{}});}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/sagar/design\+\_\+pattern/creational\+\_\+design\+\_\+patterns/\+Builder/\mbox{\hyperlink{Builder__pattern_8cpp}{Builder\+\_\+pattern.\+cpp}}\end{DoxyCompactItemize}
