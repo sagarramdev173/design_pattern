@@ -1,4 +1,4 @@
-SUBDIRS := creational_design_patterns structural_design_patterns behavioral_design_patterns
+SUBDIRS := creational_design_patterns structural_design_patterns behavioral_design_patterns docs
 
 .PHONY: all clean $(SUBDIRS)
 
