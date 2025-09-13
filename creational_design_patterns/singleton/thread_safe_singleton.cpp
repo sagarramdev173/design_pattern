@@ -20,7 +20,7 @@ class singleton{
      * 
      */
     private:
-        static singleton* instance;        
+        static singleton* instance;
         static std::mutex mtx;
         std::string dummy_value;
         singleton(std::string value){
@@ -42,7 +42,7 @@ class singleton{
                 mtx.lock();
                 if(instance == nullptr){
                 instance = new singleton(value);
-                }    
+                }
                 mtx.unlock();
             }
             return instance;
@@ -68,13 +68,13 @@ std::mutex singleton::mtx;
 void threadfoo(){
     singleton* s1 = singleton::get_instance("fromfoo");
       std::cout << "getting dummy value : " << s1->get_dummy_value() << std::endl;
-    
+
 }
 
 void threadbar(){
     singleton* s1 = singleton::get_instance("frombar");
     std::cout << "getting dummy value : " << s1->get_dummy_value() << std::endl;
-    
+
 }
 /**
  * @brief main function to demo the threadsafe singleton
@@ -82,14 +82,14 @@ void threadbar(){
  * @return int 
  */
 int main(){
-    
+
     /// creating two threads
     std::thread t1(threadfoo);
     std::thread t2(threadbar);
-    
+
     /// joining the threads
     t1.join();
     t2.join();
-    
-    return 0;   
+
+    return 0;
 }

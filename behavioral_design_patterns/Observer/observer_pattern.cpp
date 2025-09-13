@@ -28,32 +28,34 @@ class ISubscriber{
 };
 
 /**
- * @brief User class implements subscriber
- *        where each user is a subscriber with a unique id
- *        and receives notification from the service 
- */
-class User: public ISubscriber{
-    private:
-        int userid;
-    public:
-        User(int id){
-            this->userid = id;
-        }
-        void notify(string value){
-            cout << "User: "<<userid << " notified with: " << value << endl;
-        }
-};
-
-/**
  * @brief Publisher interface
  *        with basic attach ,detach and notify methods
  * 
  */
 class IPublisher{
     public:
+        virtual ~IPublisher(){};
         virtual void attach(ISubscriber *sub) = 0;
         virtual void detach(ISubscriber *sub) = 0;
-        virtual void notifySubscribers(string) = 0;
+        virtual void notify(string) = 0;
+};
+
+/**
+ * @brief User class implements subscriber
+ *        where each user is a subscriber with a unique id
+ *        and receives notification from the service.
+ */
+class User: public ISubscriber{
+    private:
+        int userid;
+    public:
+        User(int id):userid(id){}
+        void notify(string value) override{
+            cout << "User: "<<userid << " notified with: " << value << endl;
+        }
+        virtual ~User(){
+            std::cout << "User " << this->userid << " has been removed" << std::endl;
+        }
 };
 
 /**
@@ -72,19 +74,22 @@ class Publisher: public IPublisher{
         void detach(ISubscriber *sub){
             subscribers.remove(sub);
         }
-        void notifySubscribers(string msg){
+        void notify(string msg) override{
             for(auto sub: subscribers){
                 sub->notify(msg);
             }
+        }
+        virtual ~Publisher() override {
+            std::cout <<"Goodbye from Publisher\n";
         }
 };
 
 /**
  * @brief main function to test the observer pattern
  * 
- * @param argc 
- * @param argv 
- * @return int 
+ * @param argc
+ * @param argv
+ * @return int status value
  */
 int main(int argc, char const *argv[])
 {
@@ -95,8 +100,13 @@ int main(int argc, char const *argv[])
     pub->attach(user1);
     pub->attach(user2);
     pub->attach(user3);
-    pub->notifySubscribers("Hello World");
+    pub->notify("Hello World");
     pub->detach(user2);
-    pub->notifySubscribers("Hello India");
+    delete user2;
+    pub->notify("Hello India");
+    delete user1;
+    delete user3;
+    delete pub;
     return 0;
 }
+

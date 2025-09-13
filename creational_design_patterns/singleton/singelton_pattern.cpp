@@ -25,7 +25,7 @@ private:
     /**
      * @brief Construct a new singelton pattern object
      * ( Making contructor private so that we will have more control on object creation)
-     *    
+     *
      */
     singelton_pattern(){
     std::cout << "singleton_pattern classs object created" << std::endl;
@@ -42,8 +42,8 @@ public:
         if(instance != nullptr && instance_count){
         std::cout << "singleton_pattern classs object destroyed" << std::endl;
         instance_count--;
-        delete instance;        
-        instance = nullptr;        
+        delete instance;
+        instance = nullptr;
         }
     }
 
