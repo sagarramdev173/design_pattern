@@ -58,12 +58,47 @@
 ## Solution-2: lazy instance
 
 - Directory: `Solution-2 (lazy instance)/`.
-- `static logger *m_instace = nullptr;` starts empty.
-- `getInstance()` creates it with `new logger{}` on the first call.
-- The current code never calls `delete`, so the destructor is not called.
-- Register cleanup with `std::atexit()` to delete the lazy instance at exit.
-- The lazy creation check also needs synchronization before multiple threads
-  call `getInstance()`.
+- Raw pointer starts empty: `static logger *m_instance = nullptr;`.
+- `getInstance()` allocates it with `new logger{}` on the first call.
+- The constructor registers `std::atexit([] { delete m_instance; });`.
+- At normal program exit, `delete` calls `~logger()` and closes the log file.
+- The commented `std::unique_ptr<logger>` approach is an RAII alternative;
+  then manual `delete` is not needed.
+- This raw-pointer check is still not thread-safe: two threads can both see
+  `nullptr` and create two objects.
+
+## Lazy singleton interview points
+
+- **Why initialize the raw pointer to `nullptr`?** It means “no instance yet”.
+- **Why use a non-capturing lambda with `atexit`?** It converts to the
+  function pointer required by `std::atexit`.
+- **Why is `atexit` needed here?** A `new`-allocated singleton is not deleted
+  automatically when `main()` returns.
+- **What does cleanup do?** `delete m_instance` calls the logger destructor,
+  which calls `fclose()`.
+- **What is the safer ownership choice?** `std::unique_ptr`, because it owns
+  deletion through RAII.
+- **Is this implementation thread-safe?** No. Lock or use a C++11
+  function-local static before allowing concurrent `getInstance()` calls.
+
+## Double-checked locking
+
+- Check `m_instance` before locking: avoids locking after creation.
+- Lock the mutex and check `m_instance` again: another thread may have created
+  it while this thread waited.
+- Create the instance only after the second check.
+
+```cpp
+if (m_instance == nullptr) {
+  std::lock_guard<std::mutex> lock(mtx);
+  if (m_instance == nullptr)
+    m_instance = new logger{};
+}
+return *m_instance;
+```
+
+- In C++, an unlocked raw-pointer read can still be a data race.
+- Prefer a C++11 function-local static or `std::call_once` for production code.
 
 ## View the log file
 

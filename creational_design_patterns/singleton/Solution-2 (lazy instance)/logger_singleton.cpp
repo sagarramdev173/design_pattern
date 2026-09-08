@@ -1,14 +1,23 @@
 #include "logger_singleton.h"
 #include <cstdio>
+#include <cstdlib>
 
 using namespace std;
-logger *logger::m_instace = nullptr;
-
+logger *logger::m_instance = nullptr;
+std::mutex logger::mtx;
 logger &logger::getInstance() {
-  if (m_instace == nullptr) {
-    m_instace = new logger{};
+  
+  // Double check locking pattern
+  if (m_instance == nullptr) {
+    mtx.lock();
+    if (m_instance == nullptr) {
+      // if unqiue pointer apprach has been used
+      // m_instance.reset(new logger{});
+      m_instance = new logger{};
+    }
+    mtx.unlock();
   }
-  return *m_instace;
+  return *m_instance;
 }
 logger::logger() {
 #ifdef DEBUG
@@ -16,6 +25,7 @@ logger::logger() {
 #endif
   if (m_logFileStream == nullptr)
     m_logFileStream = fopen("dummy_log.txt", "w+");
+  atexit([]() { delete m_instance; });
 }
 
 logger::~logger() {

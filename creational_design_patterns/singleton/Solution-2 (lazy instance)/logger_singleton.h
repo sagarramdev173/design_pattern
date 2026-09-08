@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <fstream>
 #include <iostream>
+#include <memory>
 #include <mutex>
 #include <string>
 
@@ -11,14 +12,13 @@ class logger {
   std::string tag;
   logger();
   /*
-    Eager instance
-    static logger m_instace;
-   */
-
-  /*
     lazy instance
   */
-  static logger *m_instace;
+  static logger *m_instance;
+  /*
+    to solve the destructor problem
+  */
+  // inline static std::unique_ptr<logger> m_instance;
   /*
     assignemnet operator and copy construtor
     needs to be also private

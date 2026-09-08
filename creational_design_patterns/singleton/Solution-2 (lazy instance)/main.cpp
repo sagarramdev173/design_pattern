@@ -13,15 +13,10 @@ void application_thread() {
   logger &application_logger = logger::getInstance();
   application_logger.add_tag("app");
   application_logger.append_log("Application started");
-  application_logger.display_log();
 }
 
 int main() {
   logger &main_logger = logger::getInstance();
-  /*
-    to fail the assigment opetor this case
-    logger test_logger = main_logger;
-  */
   main_logger.add_tag("MAIN");
   main_logger.append_log("starting threads");
   thread t1(worker_thread);
