@@ -1,0 +1,4 @@
+[MAIN] starting threads
+[app] Application started
+[app] Done with threads
+[app] worker started
