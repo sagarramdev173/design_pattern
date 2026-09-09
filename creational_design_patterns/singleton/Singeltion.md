@@ -83,22 +83,74 @@
 
 ## Double-checked locking
 
-- Check `m_instance` before locking: avoids locking after creation.
-- Lock the mutex and check `m_instance` again: another thread may have created
-  it while this thread waited.
-- Create the instance only after the second check.
+- Current code in `Solution-2 (lazy instance)/logger_singleton.cpp`:
 
 ```cpp
-if (m_instance == nullptr) {
-  std::lock_guard<std::mutex> lock(mtx);
+if (m_instance == nullptr) { // read without mtx
+  mtx.lock();
   if (m_instance == nullptr)
-    m_instance = new logger{};
+    m_instance = new logger{}; // write while mtx is held
+  mtx.unlock();
 }
-return *m_instance;
 ```
 
-- In C++, an unlocked raw-pointer read can still be a data race.
-- Prefer a C++11 function-local static or `std::call_once` for production code.
+- **Issue:** another thread can read `m_instance` while this code writes it.
+  That is a data race; it can see a non-null pointer before construction is
+  fully visible.
+- **Preferred resolution:** use the **Meyers Singleton**: a C++11
+  function-local static.
+
+  ```cpp
+  logger &logger::getInstance() {
+    static logger instance;
+    return instance;
+  }
+  ```
+
+- The C++ standard makes concurrent callers wait until local-static
+  initialization completes: [static local initialization reference](https://eel.is/c++draft/stmt.dcl#3).
+- Prefer this over `std::call_once` here: it is less code, has no raw pointer,
+  needs no `atexit` cleanup, and destroys the logger automatically.
+- It needs no manual `delete` or `atexit` cleanup: its destructor runs
+  automatically at normal program exit, after `main()` returns.
+
+### Alternative: `std::call_once` (Solution-3)
+
+From `Solution-3 (lazy instance)/logger_singleton.cpp`:
+
+```cpp
+logger *logger::m_instance = nullptr;
+std::once_flag flag;
+
+logger &logger::getInstance() {
+  std::call_once(flag, []() { m_instance = new logger{}; });
+  return *m_instance;
+}
+```
+
+- `std::call_once` lets exactly one thread allocate `m_instance` and safely
+  publishes it to the other threads.
+- `Solution-3` currently has no cleanup. Because it uses `new`, its destructor
+  does not run when `main()` returns; the OS reclaims memory, but does not call
+  `~logger()` or `fclose()`.
+- Add this in the constructor to run the destructor at normal program exit:
+
+  ```cpp
+  std::atexit([] { delete m_instance; });
+  ```
+
+- A `std::unique_ptr` also provides automatic ownership, but the Meyers
+  Singleton is the smallest solution for this logger.
+- Reference: [C++ `std::call_once`](https://eel.is/c++draft/thread.once.callonce).
+
+## Meyers Singleton vs `std::call_once`
+
+| Topic | Meyers Singleton | `std::call_once` + raw pointer |
+| --- | --- | --- |
+| Creation | Function-local `static logger instance` | `new logger{}` in a once callback |
+| Thread safety | C++11 one-time initialization | `std::call_once` runs one callback |
+| Cleanup | Destructor runs automatically at normal exit | Needs `delete`/`atexit` or smart-pointer ownership |
+| Use here | Preferred: smallest solution | Use when a local static cannot work |
 
 ## View the log file
 

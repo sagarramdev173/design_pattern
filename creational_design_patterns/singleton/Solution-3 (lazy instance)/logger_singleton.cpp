@@ -1,33 +1,15 @@
 #include "logger_singleton.h"
 #include <cstdio>
 #include <cstdlib>
+#include <mutex>
 #include <new>
 
 using namespace std;
 logger *logger::m_instance = nullptr;
+std::once_flag flag;
 std::mutex logger::mtx;
 logger &logger::getInstance() {
-
-  // Double check locking pattern
-  if (m_instance == nullptr) {
-    mtx.lock();
-    if (m_instance == nullptr) {
-      // if unqiue pointer apprach has been used
-      // m_instance.reset(new logger{});
-      /*
-      compiler may alloacte this line in following manners
-      void *p = operator new(sizeof(logger));
-      new (p) logger{};
-      m_instance = static_cast<logger *>(p);
-       but it can reorder as well to optimzie
-       void *p = operator new(sizeof(logger));
-       m_instance = static_cast<logger *>(p);
-       new (p) logger{};
-      */
-      m_instance = new logger{};
-    }
-    mtx.unlock();
-  }
+  std::call_once(flag, []() { m_instance = new logger{}; });
   return *m_instance;
 }
 logger::logger() {
