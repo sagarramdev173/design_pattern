@@ -152,6 +152,37 @@ logger &logger::getInstance() {
 | Cleanup | Destructor runs automatically at normal exit | Needs `delete`/`atexit` or smart-pointer ownership |
 | Use here | Preferred: smallest solution | Use when a local static cannot work |
 
+## CRTP Singleton
+
+- Directory: `signleton_using_crtp_idom/`.
+- Put the shared Meyers-style `getInstance()` in `BaseSingleton<T>`.
+- Derive the concrete type: `class logger : public BaseSingleton<logger>`.
+- Keep the derived constructor private and make `BaseSingleton<logger>` a
+  friend, so only the base can create `logger`.
+- Delete the derived copy constructor and assignment operator.
+
+```cpp
+template <typename T>
+class BaseSingleton {
+protected:
+  BaseSingleton() = default;
+
+public:
+  static T &getInstance() {
+    static T instance;
+    return instance;
+  }
+};
+
+class logger : public BaseSingleton<logger> {
+  friend class BaseSingleton<logger>;
+  logger();
+};
+```
+
+- Use CRTP when several classes need the same singleton implementation.
+- For one class, a direct Meyers Singleton is simpler.
+
 ## View the log file
 
 ```sh
