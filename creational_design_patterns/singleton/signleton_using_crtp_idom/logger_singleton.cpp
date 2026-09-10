@@ -1,17 +1,11 @@
 #include "logger_singleton.h"
 #include <cstdio>
-#include <cstdlib>
-#include <mutex>
-#include <new>
 
 using namespace std;
-
-logger::logger() {
+logger::logger() : m_logFileStream(fopen("dummy_log.txt", "w+")) {
 #ifdef DEBUG
   cout << "Constructor called\n" << endl;
 #endif
-  if (m_logFileStream == nullptr)
-    m_logFileStream = fopen("dummy_log.txt", "w+");
 }
 
 logger::~logger() {
