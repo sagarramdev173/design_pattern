@@ -183,6 +183,16 @@ class logger : public BaseSingleton<logger> {
 - Use CRTP when several classes need the same singleton implementation.
 - For one class, a direct Meyers Singleton is simpler.
 
+## Multiton (optional reading)
+
+- Reference: [multiton/](multiton/).
+- Problem: one singleton logger cannot represent both cloud and local logging
+  independently.
+- Multiton keeps one singleton per known type: one `cloudLogger` and one
+  `localLogger`.
+- `logger::getInstance("cloud")` or `logger::getInstance("local")` returns
+  the matching shared `logger` reference.
+
 ## Singleton drawbacks
 
 - A class that calls `logger::getInstance()` directly has a hidden global
