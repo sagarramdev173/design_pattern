@@ -183,6 +183,17 @@ class logger : public BaseSingleton<logger> {
 - Use CRTP when several classes need the same singleton implementation.
 - For one class, a direct Meyers Singleton is simpler.
 
+## Singleton drawbacks
+
+- A class that calls `logger::getInstance()` directly has a hidden global
+  dependency.
+- Unit tests cannot easily replace that real logger with a mock or fake, so
+  tests may write real files or share state with other tests.
+- This breaks the **Dependency Inversion Principle**: high-level code depends
+  on the concrete singleton instead of an injected abstraction.
+- Prefer passing a logger/interface as a constructor or function argument when
+  the code needs isolated unit tests.
+
 ## View the log file
 
 ```sh
